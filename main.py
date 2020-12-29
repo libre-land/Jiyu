@@ -25,6 +25,8 @@ class LoginScreen(Screen):
         self.theme_cls = ThemeManager()
         self.ids.icon_3.text_color = self.theme_cls.primary_color
 
+        self.manager.current = 'menu_screen'
+
 
     def previous_slide_button_1(self):
         self.ids.slide.load_previous()
@@ -44,10 +46,15 @@ class LoginScreen(Screen):
         self.ids.icon_3.text_color = 0, 0, 0, 1
 
 
+class MenuScreen(Screen):
+    pass
+
+
 class MyMessengerApp(MDApp):
     def build(self):
         sm = ScreenManager()
         sm.add_widget(LoginScreen(name='login_screen'))
+        sm.add_widget(MenuScreen(name='menu_screen'))
         return sm
 
 
