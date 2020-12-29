@@ -12,14 +12,6 @@ class LoginScreen(Screen):
         self.ids.slide.load_previous()
 
 
-class MainScreen(Screen):
-    pass
-
-
-class SecondScreen(Screen):
-    pass
-
-
 class MyMessengerApp(MDApp):
     def build(self):
         sm = ScreenManager()
