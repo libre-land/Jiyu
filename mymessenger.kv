@@ -1,0 +1,122 @@
+<LoginScreen>:
+    id: login_screen
+
+    MDFloatLayout:
+        MDCard:
+            size_hint: .45, .8
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+            Carousel:
+                id: slide
+
+                MDFloatLayout:
+                    MDTextField:
+                        hint_text: 'First Name'
+                        helper_text: 'is optional'
+                        helper_text_mode: 'on_focus'
+                        size_hint_x: .8
+                        pos_hint: {'center_x': .5, 'center_y': .48}
+
+                    MDTextField:
+                        hint_text: 'Last Name'
+                        helper_text: 'is optional'
+                        helper_text_mode: 'on_focus'
+                        size_hint_x: .8
+                        pos_hint: {'center_x': .5, 'center_y': .36}
+
+                    MDRaisedButton:
+                        text: 'Next'
+                        size_hint_x: .6
+                        pos_hint: {'center_x': .5, 'center_y': .2}
+                        on_release: login_screen.next_slide_button()
+
+
+                MDFloatLayout:
+                    MDTextField:
+                        hint_text: 'Email adress'
+                        helper_text: 'is optional'
+                        helper_text_mode: 'on_focus'
+                        size_hint_x: .8
+                        pos_hint: {'center_x': .5, 'center_y': .48}
+
+                    MDTextField:
+                        hint_text: 'Username'
+                        required: True
+                        helper_text_mode: 'on_error'
+                        helper_text: 'is required'
+                        size_hint_x: .8
+                        pos_hint: {'center_x': .5, 'center_y': .36}
+
+                    MDRaisedButton:
+                        text: 'Next'
+                        size_hint_x: .6
+                        pos_hint: {'center_x': .5, 'center_y': .2}
+                        on_release: login_screen.next_slide_button()
+
+                    MDRaisedButton:
+                        text: 'Previous'
+                        size_hint_x: .6
+                        pos_hint: {'center_x': .5, 'center_y': .11}
+                        on_release: login_screen.previous_slide_button()
+
+
+                MDFloatLayout:
+                    MDTextField:
+                        hint_text: 'Password'
+                        password: True
+                        required: True
+                        helper_text_mode: 'on_error'
+                        helper_text: 'is required'
+                        size_hint_x: .8
+                        pos_hint: {'center_x': .5, 'center_y': .48}
+
+                    MDTextField:
+                        hint_text: 'Confirm password'
+                        password: True
+                        required: True
+                        helper_text_mode: 'on_error'
+                        helper_text: 'is required'
+                        size_hint_x: .8
+                        pos_hint: {'center_x': .5, 'center_y': .36}
+
+                    MDRaisedButton:
+                        text: 'Join Jiyu'
+                        size_hint_x: .6
+                        pos_hint: {'center_x': .5, 'center_y': .2}
+
+                    MDRaisedButton:
+                        text: 'Previous'
+                        size_hint_x: .6
+                        pos_hint: {'center_x': .5, 'center_y': .11}
+                        on_release: login_screen.previous_slide_button()
+
+
+        Image:
+            source: 'logo.png'
+            pos_hint: {'center_x': .5, 'center_y': .75}
+
+        MDIconButton:
+            icon: 'numeric-1-circle'
+            pos_hint: {'center_x': .34, 'center_y': .58}
+            user_font_size: '35sp'
+
+        MDProgressBar:
+            id: progress_bar_1
+            size_hint_x: .1
+            pos_hint: {'center_x': .42, 'center_y': .58}
+
+        MDIconButton:
+            icon: 'numeric-2-circle'
+            icon_color: rgba(123, 73, 0,255)
+            pos_hint: {'center_x': .5, 'center_y': .58}
+            user_font_size: '35sp'
+
+        MDProgressBar:
+            id: progress_bar_2
+            size_hint_x: .1
+            pos_hint: {'center_x': .58, 'center_y': .58}
+
+        MDIconButton:
+            icon: 'numeric-3-circle'
+            pos_hint: {'center_x': .66, 'center_y': .58}
+            user_font_size: '35sp'
