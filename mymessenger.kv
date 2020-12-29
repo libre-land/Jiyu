@@ -57,7 +57,7 @@
                         text: 'Previous'
                         size_hint_x: .6
                         pos_hint: {'center_x': .5, 'center_y': .11}
-                        on_release: login_screen.previous_slide_button_1()
+                        on_release: login_screen.previous_slide_button_2()
 
 
                 MDFloatLayout:
@@ -83,12 +83,13 @@
                         text: 'Join Jiyu'
                         size_hint_x: .6
                         pos_hint: {'center_x': .5, 'center_y': .2}
+                        on_release: login_screen.join_button()
 
                     MDRaisedButton:
                         text: 'Previous'
                         size_hint_x: .6
                         pos_hint: {'center_x': .5, 'center_y': .11}
-                        on_release: login_screen.previous_slide_button_2()
+                        on_release: login_screen.previous_slide_button_3()
 
 
         Image:
@@ -122,6 +123,7 @@
             pos_hint: {'center_x': .58, 'center_y': .58}
 
         MDIconButton:
+            id: icon_3
             icon: 'numeric-3-circle'
             pos_hint: {'center_x': .66, 'center_y': .58}
             user_font_size: '35sp'
