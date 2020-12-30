@@ -1,3 +1,12 @@
+<StartScreen>:
+    id: start_screen
+
+    MDRaisedButton:
+        text: 'Sign Up'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        on_release: start_screen.next_screen_buttton()
+
+
 <LoginScreen>:
     id: login_screen
 
@@ -26,7 +35,7 @@
 
                     MDRaisedButton:
                         text: 'Next'
-                        size_hint_x: .6
+                        size_hint: (.6, .076)
                         pos_hint: {'center_x': .5, 'center_y': .2}
                         on_release: login_screen.next_slide_button_1()
 
@@ -49,13 +58,13 @@
 
                     MDRaisedButton:
                         text: 'Next'
-                        size_hint_x: .6
+                        size_hint: (.6, .076)
                         pos_hint: {'center_x': .5, 'center_y': .2}
                         on_release: login_screen.next_slide_button_2()
 
                     MDRaisedButton:
                         text: 'Previous'
-                        size_hint_x: .6
+                        size_hint: (.6, .076)
                         pos_hint: {'center_x': .5, 'center_y': .11}
                         on_release: login_screen.previous_slide_button_2()
 
@@ -81,13 +90,13 @@
 
                     MDRaisedButton:
                         text: 'Join Jiyu'
-                        size_hint_x: .6
+                        size_hint: (.6, .076)
                         pos_hint: {'center_x': .5, 'center_y': .2}
                         on_release: login_screen.join_button()
 
                     MDRaisedButton:
                         text: 'Previous'
-                        size_hint_x: .6
+                        size_hint: (.6, .076)
                         pos_hint: {'center_x': .5, 'center_y': .11}
                         on_release: login_screen.previous_slide_button_3()
 
@@ -130,8 +139,6 @@
 
 
 <MenuScreen>:
-    id: menu_screen
-
     MDFloatLayout:
         MDRaisedButton:
             text: 'Menu Screen'

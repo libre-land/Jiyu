@@ -4,6 +4,11 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
 
 
+class StartScreen(Screen):
+    def next_screen_buttton(self):
+        self.manager.current = 'login_screen'
+
+
 class LoginScreen(Screen):
     def next_slide_button_1(self):
         self.ids.slide.load_next()
@@ -53,6 +58,7 @@ class MenuScreen(Screen):
 class MyMessengerApp(MDApp):
     def build(self):
         sm = ScreenManager()
+        sm.add_widget(StartScreen(name='start_screen'))
         sm.add_widget(LoginScreen(name='login_screen'))
         sm.add_widget(MenuScreen(name='menu_screen'))
         return sm
