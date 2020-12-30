@@ -1,9 +1,18 @@
 <StartScreen>:
     id: start_screen
 
+    Image:
+        source: 'logo.png'
+        pos_hint: {'center_x': .5, 'center_y': .75}
+
+    MDFloatLayout:
+        MDLabel:
+            text: 'The place you can feel your Freedom'
+            halign: 'center'
+
     MDRaisedButton:
         text: 'Sign Up'
-        pos_hint: {'center_x': .5, 'center_y': .5}
+        pos_hint: {'center_x': .5, 'center_y': .4}
         on_release: start_screen.next_screen_buttton()
 
 

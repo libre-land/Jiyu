@@ -61,6 +61,7 @@ class MyMessengerApp(MDApp):
         sm.add_widget(StartScreen(name='start_screen'))
         sm.add_widget(LoginScreen(name='login_screen'))
         sm.add_widget(MenuScreen(name='menu_screen'))
+        
         return sm
 
 
