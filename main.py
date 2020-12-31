@@ -2,6 +2,10 @@ import kivy
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
+from kivy.core.window import Window
+
+
+Window.size = (414, 736)
 
 
 class StartScreen(Screen):
@@ -61,7 +65,7 @@ class MyMessengerApp(MDApp):
         sm.add_widget(StartScreen(name='start_screen'))
         sm.add_widget(LoginScreen(name='login_screen'))
         sm.add_widget(MenuScreen(name='menu_screen'))
-        
+
         return sm
 
 
