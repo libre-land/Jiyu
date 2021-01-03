@@ -1,4 +1,3 @@
-import kivy
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
